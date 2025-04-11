@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="neon-container">
+        <h1 class="neon-text">JEOPARDY GAME</h1>
+    </header>
+    <div class="board-container">
+        <div class="col col1">
+            <div class="topic topic1">Topic 1</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value1">0</div>
+                    <div class="cur cur1"></div>
+                </div>
+                <div class="name neon-text">Nhóm 1</div>
+            </div>
+        </div>
+        <div class="col col2">
+            <div class="topic topic2">Topic 2</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value2">0</div>
+                    <div class="cur cur2"></div>
+                </div>
+                <div class="name neon-text">Nhóm 2</div>
+            </div>
+        </div>
+        <div class="col col3">
+            <div class="topic topic3">Topic 3</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value4">0</div>
+                    <div class="cur cur4"></div>
+                </div>
+                <div class="name neon-text">Nhóm 4</div>
+            </div>
+        </div>
+        <div class="col col4">
+            <div class="topic topic4">Topic 4</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value5">0</div>
+                    <div class="cur cur5"></div>
+                </div>
+                <div class="name neon-text">Nhóm 5</div>
+            </div>
+        </div>
+        <div class="col col5">
+            <div class="topic topic5">Topic 5</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value6">0</div>
+                    <div class="cur cur6"></div>
+                </div>
+                <div class="name neon-text">Nhóm 6</div>
+            </div>
+        </div>
+        <div class="col col6">
+            <div class="topic topic6">Topic 6</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value7">0</div>
+                    <div class="cur cur7"></div>
+                </div>
+                <div class="name neon-text">Nhóm 7</div>
+            </div>
+        </div>
+        <div class="col col7">
+            <div class="topic topic7">Topic 7</div>
+            <div class="question-container">
+                <div class="ques">10</div>
+                <div class="ques">20</div>
+                <div class="ques">30</div>
+                <div class="ques">40</div>
+                <div class="ques">50</div>
+            </div>
+            <div class="chart">
+                <div class="point">
+                    <div class="value value8">0</div>
+                    <div class="cur cur8"></div>
+                </div>
+                <div class="name neon-text">Nhóm 8</div>
+            </div>
+        </div>
+    </div>
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+          <span id="closePopup" class="close-btn">&times;</span>
+          <p id="questionText">Câu hỏi sẽ hiện ở đây</p>
+          <div id="clock">15</div>
+          <div id = "line" style="display: none"></div>
+          <p id="answerText" style="display: none; font-weight: bold;"></p>
+          <div class="groups-container">
+            <button class = "group">G1</button>
+            <button class = "group">G2</button>
+            <button class = "group">G4</button>
+            <button class = "group">G5</button>
+            <button class = "group">G6</button>
+            <button class = "group">G7</button>
+            <button class = "group">G8</button>
+          </div>
+          <button id="showAnswerBtn">Ans</button>
+          <button id="startBtn">Start</button>
+        </div>
+    </div>
+    <audio id="tickSound" src="tick.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
