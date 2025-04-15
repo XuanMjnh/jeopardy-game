@@ -9,59 +9,95 @@ const scores = {
 }
 let score;
 const questions = [
-    { question: "1 + 1 là bao nhiêu?", answer: "2" },
-    { question: "Thủ đô của Việt Nam?", answer: "Hà Nội" },
-    { question: "Màu cờ Việt Nam?", answer: "Đỏ và vàng" },
-    { question: "2 + 2 bằng bao nhiêu?", answer: "4" },
-    { question: "Trái Đất quay quanh gì?", answer: "Mặt Trời" },
-    { question: "Môn thể thao vua là gì?", answer: "Bóng đá" },
-    { question: "Loài vật nào là vua sơn lâm?", answer: "Sư tử" },
-    { question: "Môn học tính toán là gì?", answer: "Toán học" },
-    { question: "Ai là người phát minh ra bóng đèn?", answer: "Thomas Edison" },
-    { question: "Số nguyên tố đầu tiên là?", answer: "2" },
-    { question: "Cờ Việt Nam có mấy ngôi sao?", answer: "1" },
-    { question: "Ngày Quốc Khánh Việt Nam?", answer: "2/9" },
-    { question: "Chữ cái đầu tiên trong bảng chữ cái?", answer: "A" },
-    { question: "3 x 3 bằng bao nhiêu?", answer: "9" },
-    { question: "Màu của lá cây là gì?", answer: "Xanh lá" },
-    { question: "5 + 5 = ?", answer: "10" },
-    { question: "Hành tinh lớn nhất hệ Mặt Trời?", answer: "Sao Mộc" },
-    { question: "Việt Nam nằm ở châu lục nào?", answer: "Châu Á" },
-    { question: "Hà Nội thuộc miền nào của Việt Nam?", answer: "Miền Bắc" },
-    { question: "Chim nào được gọi là vua tốc độ?", answer: "Chim ưng" },
-    { question: "Người đầu tiên lên Mặt Trăng?", answer: "Neil Armstrong" },
-    { question: "Tháng có ít ngày nhất?", answer: "Tháng 2" },
-    { question: "Con vật kêu 'meo meo' là con gì?", answer: "Con mèo" },
-    { question: "Mỗi giờ có bao nhiêu phút?", answer: "60" },
-    { question: "Một ngày có bao nhiêu giờ?", answer: "24" },
-    { question: "Số sau 99 là số nào?", answer: "100" },
-    { question: "Tháng cuối cùng trong năm?", answer: "Tháng 12" },
-    { question: "Thủ đô của Pháp?", answer: "Paris" },
-    { question: "Ngôn ngữ chính của Việt Nam?", answer: "Tiếng Việt" },
-    { question: "Nước nào có dân số đông nhất thế giới?", answer: "Trung Quốc" },
-    { question: "Con gì có vòi dài?", answer: "Con voi" },
-    { question: "Cây gì được gọi là vua của các loại quả?", answer: "Sầu riêng" },
-    { question: "Nơi lạnh nhất Trái Đất là đâu?", answer: "Nam Cực" },
-    { question: "Con người có bao nhiêu ngón tay?", answer: "10" },
-    { question: "hello", answer: "10" }
+    { question: "Quả bóng vàng (Ballon d'Or) năm 2023 được trao cho cầu thủ nào?", answer: "Lionel Messi", image: "", video: "" },
+    { question: "Vận động viên người Việt Nam đầu tiên giành huy chương vàng tại Thế vận hội Olympic là ai?", answer: "Hoàng Xuân Vinh", image: "", video: "" },
+    { question: "Một trận đấu bóng rổ chuyên nghiệp NBA có bao nhiêu hiệp đấu chính thức?", answer: "4 hiệp", image: "", video: "" },
+    { question: "“Big Four” làng quần vợt đã làm mưa làm gió suốt hai thập kỷ qua. Roger Federer, Rafael Nadal, Novak Djokovic – vậy cái tên còn lại trong bộ tứ huyền thoại là ai?", answer: "Andy Murray", image: "", video: "" },
+    { question: "Cuộc thi marathon đầu tiên trong lịch sử nhân loại được tổ chức ở quốc gia nào – nơi khai sinh ra tinh thần Olympic?", answer: "Hy Lạp", image: "", video: "" },
+    { question: "Khi điều khiển xe máy tham gia giao thông cần phải có những loại giấy tờ gì?", answer: "Giấy phép lái xe (Bằng lái xe), Giấy đăng ký xe, Giấy chứng nhận bảo hiểm trách nhiệm dân sự của chủ xe", image: "", video: "" },
+    { question: "Đây là biển báo gì?", answer: "Biển cấm vượt", image: "./images/6.jpg", video: "" },
+    { question: "Tại nơi đường bộ giao nhau cùng mức với đường sắt chỉ có đèn tín hiệu hoặc chuông báo hiệu, khi đèn tín hiệu màu đỏ đã bật sáng hoặc có tiếng chuông báo hiệu, người tham gia giao thông phải dừng lại ngay và giữ khoảng cách tối thiểu bao nhiêu mét tính từ ray gần nhất?", answer: "5 mét", image: "", video: "" },
+    { question: "Đây là biển gì?", answer: "Biển cấm xe gắn máy(khác xe máy)", image: "images/8.webp", video: "" },
+    { question: "Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?", answer: "7 → 8 → 9 → 1 → 2 → 3 → 6 → 4 → 5", image: "./images/10.png", video: "" },
+    { question: "”Vội lạc vào giấc mơ nhẹ nhàng tựa ý thơ, Nụ cười người để anh nhớ để anh….”", answer: "mong đợi", image: "", video: "videos/11.mp4" },
+    { question: "“Vẫn nhớ một mình em vì em xứng đáng, tận sâu tiềm thức anh yêu em…” ", answer: "luôn yêu em", image: "", video: "videos/12.mp4" },
+    { question: "“Đến khẽ đến nhẹ nhàng, với một cô gái …”", answer: "chưa bao giờ yêu", image: "", video: "videos/13.mp4" },
+    { question: "“Đợi chờ em trước nhà từ sáng đến trưa chiều tối mắc màn…”", answer: "đấy luôn", image: "", video: "videos/14.mp4" },
+    { question: "“Đủ chật để nhìn nhau cho thật rõ, đủ tối để thấy khói kia…”", answer: "lửng lơ", image: "", video: "videos/15.mp4" },
+    { question: "Bài thơ Lượm của nhà thơ nào?", answer: "Tố Hữu", image: "", video: "" },
+    { question: "Nhà thơ nào được mệnh danh là 'ông hoàng thơ tình' của Việt Nam?", answer: "Xuân Diệu", image: "", video: "" },
+    { question: "Tên gọi khác của 'Nhật ký trong tù' của Hồ Chí Minh?", answer: "Ngục trung nhật ký", image: "", video: "" },
+    { question: "'Thôn Đoài ngồi nhớ thôn Đông, Một người chín nhớ mười mong một người.'Câu thơ trên sử dụng biện pháp nghệ thuật gì?", answer: "Câu thơ trên sử dụng biện pháp hoán dụ: lấy vật chứa đựng để gọi vật bị chứa đựng.", image: "", video: "" },
+    { question: "Biện pháp tu từ được sử dung trong câu thơ 'Trơ cái hồng nhan với nước non'", answer: "Đảo ngữ, đảo động từ 'trơ' lên đầu câu để nhấn mạnh", image: "", video: "" },
+    { question: "Món 'bánh chưng' truyền thống của Việt Nam thường được gói bằng loại lá gì?", answer: "Lá dong", image: "", video: "" },
+    { question: "Quả nào chứa nhiều vitamin C nhất?", answer: "Quả ổi", image: "", video: "" },
+    { question: "Đây là món gì?", answer: "Chả rươi", image: "./images/23.png", video: "" },
+    { question: "Bánh gật gù là đặc sản nổi tiếng của tỉnh thành nào?", answer: "Quảng Ninh", image: "./images/24.png", video: "" },
+    { question: "Đây là món gì?", answer: "Hoành Thánh", image: "./images/25.png", video: "" },
+    { question: "Mỗi năm có bảy tháng 31 ngày. Đố bạn có bao nhiêu tháng có 28 ngày?", answer: "12 tháng", image: "", video: "" },
+    { question: "n / u / N / l / c / ồ / g / ự", answer: "Nguồn lực", image: "", video: "" },
+    { question: "Túi gì nghe tên tưởng ngọt, hoá ra đắng ngắt", answer: "Túi mật", image: "", video: "" },
+    { question: "đêm / vút / dài / Đường / xe / vun", answer: "Đường dài vun vút xe đêm", image: "", video: "" },
+    { question: "trong / nhà / đâu / Còn / vắng / quê / chiều / xa / bóng", answer: "Còn đâu bóng quê nhà trong chiều xa vắng", image: "", video: "" },
+    { question: "Cực Bắc của Việt Nam thuộc tỉnh nào?", answer: "Hà Giang", image: "", video: "" },
+    { question: "Dãy núi nào là ranh giới tự nhiên giữa miền Bắc và miền Trung Việt Nam?", answer: "Dãy Bạch Mã", image: "", video: "" },
+    { question: "Tỉnh nào có đường bờ biển dài nhất Việt Nam?", answer: "Khánh Hòa", image: "", video: "" },
+    { question: "Tỉnh nào có mật độ dân số thấp nhất cả nước?", answer: "Lai Châu", image: "", video: "" },
+    { question: "Năm 2000 Việt Nam có bao nhiêu tỉnh thành?", answer: "61", image: "", video: "" }
+  ];
+  
+
+  const cauhoiphu = [
+    { question: "PTIT viết tắt cho gì?", answer: "Posts and Telecommunications Institute of Technology" },
+    { question: "Trụ sở chính của Học viện Công nghệ Bưu chính Viễn Thông được đặt ở đường nào?", answer: "Đường Hoàng Quốc Việt" },
+    { question: "Năm thành lập chính thức của Học viện Công nghệ Bưu chính Viễn thông là năm nào?", answer: "1997" },
+    { question: "Tòa nhà giảng đường và hiệu bộ tại Cơ sở Ngọc Trục của PTIT cao bao nhiêu tầng?", answer: "13 tầng" },
+    { question: "Năm nào PTIT chính thức được công nhận là trường đại học trọng điểm quốc gia trong lĩnh vực ICT?", answer: "2010" },
   ];
   
   let currentQuestionIndex = 0;
   
-  
+const imgEl = document.getElementById("questionImage");
+const vidEl = document.getElementById("questionVideo");
+
+
 document.querySelectorAll(".ques").forEach((el, index) => {
     el.addEventListener("click", () => {
         document.getElementById("clock").style.display = "block";
         document.getElementById("clock").textContent = "15";
         document.getElementById("clock").style.fontSize = "10rem";
         document.getElementById("clock").style.color = "white";
+        
+
+        if(questions[index]?.image || questions[index]?.video) {
+            document.getElementById("clock").classList.add("has-media");
+            document.getElementById("answerText").classList.add("has-media");
+        }
+        else {
+            document.getElementById("clock").classList.remove("has-media");
+            document.getElementById("answerText").classList.remove("has-media");
+        }
+
+        if (questions[index]?.image) {
+            imgEl.src = questions[index].image;
+            imgEl.style.display = "block";
+        } else {
+            imgEl.style.display = "none";
+        }
+        
+        if (questions[index]?.video) {
+            vidEl.src = questions[index].video;
+            vidEl.style.display = "block";
+        } else {
+            vidEl.style.display = "none";
+        }
+
         const question = questions[index]?.question || "Chưa có câu hỏi ở đây!";
         const answer = questions[index]?.answer || "invalid";
         score = parseInt(el.textContent);
         document.getElementById("questionText").textContent = question;
         document.getElementById("popup").classList.remove("hidden");
         document.getElementById("answerText").style.display = "none";
-        document.getElementById("line").style.display = "none";
         document.getElementById("answerText").textContent = answer;
         el.classList.add("disabled");
         el.style.pointerEvents = "none";
@@ -77,7 +113,6 @@ document.getElementById("closePopup").addEventListener("click", () => {
 document.getElementById("showAnswerBtn").addEventListener('click', () => {
 
     document.getElementById("answerText").style.display = "flex";
-    document.getElementById("line").style.display = "block";
     document.getElementById("clock").style.display = "none";
 })
 
@@ -132,4 +167,27 @@ document.getElementById("startBtn").addEventListener("click", () => {
             
         }
     }, 1000);
+});
+
+
+
+
+
+
+
+
+document.querySelectorAll(".topic").forEach((el, index) => {
+    el.addEventListener("click", () => {
+        document.getElementById("clock").style.display = "block";
+        document.getElementById("clock").textContent = "15";
+        document.getElementById("clock").style.fontSize = "10rem";
+        document.getElementById("clock").style.color = "white";
+        const question = cauhoiphu[index]?.question || "Chưa có câu hỏi ở đây!";
+        const answer = cauhoiphu[index]?.answer || "invalid";
+        score = (index+1)*10;
+        document.getElementById("questionText").textContent = question;
+        document.getElementById("popup").classList.remove("hidden");
+        document.getElementById("answerText").style.display = "none";
+        document.getElementById("answerText").textContent = answer;
+    });
 });

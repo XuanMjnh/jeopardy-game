@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Special+Gothic+Condensed+One&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -13,7 +14,8 @@
     </header>
     <div class="board-container">
         <div class="col col1">
-            <div class="topic topic1">Topic 1</div>
+            <div class="topic topic1">Thể thao<i class="fa-solid fa-baseball"></i>
+            </div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -30,7 +32,7 @@
             </div>
         </div>
         <div class="col col2">
-            <div class="topic topic2">Topic 2</div>
+            <div class="topic topic2">Giao thông <i class="fa-solid fa-traffic-light"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -47,7 +49,7 @@
             </div>
         </div>
         <div class="col col3">
-            <div class="topic topic3">Topic 3</div>
+            <div class="topic topic3">Âm nhạc <i class="fa-solid fa-music"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -64,7 +66,7 @@
             </div>
         </div>
         <div class="col col4">
-            <div class="topic topic4">Topic 4</div>
+            <div class="topic topic4">Văn học <i class="fa-solid fa-book"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -81,7 +83,7 @@
             </div>
         </div>
         <div class="col col5">
-            <div class="topic topic5">Topic 5</div>
+            <div class="topic topic5">Ẩm thực <i class="fa-solid fa-utensils"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -98,7 +100,7 @@
             </div>
         </div>
         <div class="col col6">
-            <div class="topic topic6">Topic 6</div>
+            <div class="topic topic6">Tiếng việt <i class="fa-solid fa-spell-check"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -115,7 +117,7 @@
             </div>
         </div>
         <div class="col col7">
-            <div class="topic topic7">Topic 7</div>
+            <div class="topic topic7">Địa lý <i class="fa-solid fa-map-location-dot"></i></div>
             <div class="question-container">
                 <div class="ques">10</div>
                 <div class="ques">20</div>
@@ -136,8 +138,12 @@
         <div class="popup-content">
           <span id="closePopup" class="close-btn">&times;</span>
           <p id="questionText">Câu hỏi sẽ hiện ở đây</p>
+          <div id="mediaContainer">
+            <img id="questionImage" style="max-width: 100%; display: none;" />
+            <video id="questionVideo" controls style="max-width: 100%; display: none;"></video>
+            </div>
           <div id="clock">15</div>
-          <div id = "line" style="display: none"></div>
+          
           <p id="answerText" style="display: none; font-weight: bold;"></p>
           <div class="groups-container">
             <button class = "group">G1</button>
